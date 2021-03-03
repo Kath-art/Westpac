@@ -10,19 +10,18 @@
 //
 
 const model = {
-    usernameAndPasswordfields: '.form-group',
+    usernameAndPasswordFields: '.form-control',
     loginAndRegisterButtons: '.btn',
 }
 
-// const username = Cypress.env('username');
-// const password = Cypress.env('password');
-
 // -- This is a parent command --
 Cypress.Commands.add("login", (username, password) => { 
-    cy.get(model.usernameAndPasswordfields).eq(0).type(Cypress.env('username'));
-    cy.get(model.usernameAndPasswordfields).eq(1).type(Cypress.env('password'));
+    username = 'registereduser';
+    password = 'Password!23';
+    cy.get(model.usernameAndPasswordFields).eq(0).type(username);
+    cy.get(model.usernameAndPasswordFields).eq(1).type(password);
     cy.get(model.loginAndRegisterButtons).eq(0).click();
-})
+});
 //
 //
 // -- This is a child command --

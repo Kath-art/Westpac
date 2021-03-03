@@ -56,7 +56,7 @@ describe('registration',() => {
     });
 
     it('completes the registration form', () => {
-        cy.get(model.registrationFormLoginField).type('testuser');
+        cy.get(model.registrationFormLoginField).type('testinguser');
         cy.get(model.registrationFormFirstNameField).type('testfirstname');
         cy.get(model.registrationFormLastNameField).type('testlastnamefield');
         cy.get(model.registrationFormPasswordField).type('Password!23');
