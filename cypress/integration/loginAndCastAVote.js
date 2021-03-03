@@ -1,6 +1,6 @@
 const model = {
     loggedInNavBar:'my-login',
-    diabloLink: 'tr:first-child td a',
+    diabloLinks: 'tr:first-child td a',
     cardBlockHeading: '.card-block h4',
     voteColumn: '.col-lg-4',
     voteComment:'textarea',
@@ -17,7 +17,7 @@ describe('User logs in and casts a vote', () => {
             .and('contain', 'Hi')
             .and('contain','Logout')
         cy.visit('/overall');
-        cy.get(model.diabloLink).eq(2).click();
+        cy.get(model.diabloLinks).eq(2).click();
         cy.get(model.cardBlockHeading).eq(1).should('have.text','Specification');
         cy.get(model.voteColumn).then((column) => {
             if(column.length < 0) {
