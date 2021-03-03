@@ -36,7 +36,7 @@ const model = {
 
 describe('registration',() => {
     it('visits the homepage', () => {
-        cy.visit('https://buggy.justtestit.org/');
+        cy.visit('/');
         cy.injectAxe();
     });
 
