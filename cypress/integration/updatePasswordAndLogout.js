@@ -36,8 +36,7 @@ describe('tests the password validation rules and logs out',() => {
         cy.get(model.confirmPassword).clear().type('password');
         cy.get(model.saveButton).click();
         cy.get(model.invalidPasswordException).should('be.visible')
-            .contains('Password must have uppercase characters')
-
+            .contains('Password must have uppercase characters');
     });
 
      it('displays the  limit exceeded alert box', () => {
@@ -49,7 +48,7 @@ describe('tests the password validation rules and logs out',() => {
         })
             cy.get(model.limitExceededException).then(($e) => {
                 cy.wrap($e).should('be.visible')
-                .contains('Password must have uppercase characters')
+                .contains('Limit exceeded')
                 .and('have.css','background-color')
                 .and('eq', 'rgb(242, 222, 222)');
             });   
