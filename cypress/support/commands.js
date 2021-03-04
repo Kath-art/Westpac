@@ -12,16 +12,21 @@
 const model = {
     usernameAndPasswordFields: '.form-control',
     loginAndRegisterButtons: '.btn',
+    loggedInNavBar:'my-login',
+    logoutLink: '.nav-link',
 }
 
 // -- This is a parent command --
-Cypress.Commands.add("login", (username, password) => { 
-    username = 'registereduser';
-    password = 'Password!23';
-    cy.get(model.usernameAndPasswordFields).eq(0).type(username);
-    cy.get(model.usernameAndPasswordFields).eq(1).type(password);
+Cypress.Commands.add('login', (username, password) => { 
+    cy.get(model.usernameAndPasswordFields).eq(0).type('registereduser');
+    cy.get(model.usernameAndPasswordFields).eq(1).type('Password!23');
     cy.get(model.loginAndRegisterButtons).eq(0).click();
 });
+
+Cypress.Commands.add('logout', () => {
+    cy.get(model.loggedInNavBar).should('be.visible');
+    cy.get(model.logoutLink).eq(2).click();
+})
 //
 //
 // -- This is a child command --
