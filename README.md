@@ -8,7 +8,8 @@ log the 2 most critical defects
 create tests using any test automation tool
 
 
-* Getting started
+Getting started
+
 Clone the repo here: https://github.com/Kath-art/Westpac
 If you don't have it already, install npm.  Instructions can be found here: https://nodejs.org/en/download/
 To open the cypress test runner, in the terminal type `npx cypress open`
