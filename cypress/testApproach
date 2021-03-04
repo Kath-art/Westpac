@@ -1,0 +1,23 @@
+Test Approach for Buggy Cars Rating
+
+Automated functional testing will be used to test key aspects of Buggy Cars Rating functionality.  
+Cypress version 6.6.0 will be used for this testing and includes Electron version 11.2.3 and Chrome version 89 - enabling some browser testing.
+A11y accessibility checks will also occur, with the use of the aXe cypress plugin.  These results will be and collated and output to the terminal.
+
+Tests will include:
+* site registration, 
+* logging in, 
+* voting for a car, 
+* creating and updating profile information, 
+* updating password details, 
+* password error checking and logging out.
+
+Only valid values will be used during this testing, (except when testing for error messages).  This will be to ensure that the main user journeys, ("happy paths"),
+function correctly.
+
+Testing will be executed by the tester who writes the tests and will be run on a MacBook Air with a Catalina OS.  Tests can be executed either on 
+
+In future iterations, screenshot, additional browser, and viewport size, testing will be added.
+
+
+ 
