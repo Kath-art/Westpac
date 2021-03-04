@@ -3,6 +3,7 @@ Test Approach for Buggy Cars Rating
 Automated functional testing will be used to test key aspects of Buggy Cars Rating functionality.  
 Cypress version 6.6.0 will be used for this testing and includes Electron version 11.2.3 and Chrome version 89 - enabling some browser testing.
 A11y accessibility checks will also occur, with the use of the aXe cypress plugin.  These results will be and collated and output to the terminal.
+Tests will be written in javascript.
 
 Tests will include:
 * site registration, 

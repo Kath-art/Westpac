@@ -18,8 +18,10 @@ const model = {
 
 // -- This is a parent command --
 Cypress.Commands.add('login', (username, password) => { 
-    cy.get(model.usernameAndPasswordFields).eq(0).type('registereduser');
-    cy.get(model.usernameAndPasswordFields).eq(1).type('Password!23');
+    username = Cypress.env('username');
+    password = Cypress.env('password');
+    cy.get(model.usernameAndPasswordFields).eq(0).type(`${username}`);
+    cy.get(model.usernameAndPasswordFields).eq(1).type(`${password}`);
     cy.get(model.loginAndRegisterButtons).eq(0).click();
 });
 
