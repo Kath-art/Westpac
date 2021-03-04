@@ -20,5 +20,6 @@ To open the cypress test runner, in the terminal type `npx cypress open`
 Select which browser you'd like to use and then click on a file to start the test.
 
 N.B. Please run the registration test first, as this sets up the user credentials for all the other tests.
+
 For more information on cypress, please refer to their documentation: https://www.cypress.io/
 
