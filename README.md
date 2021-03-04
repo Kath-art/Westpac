@@ -1,5 +1,6 @@
 # Westpac
 Westpac Practical Assignment
+
 This is a practical testing assignment for Westpac bank.
 It's objectives are:
 to create a test approach for the automated testing of " https://buggy.justtestit.org" 
