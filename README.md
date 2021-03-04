@@ -9,7 +9,7 @@ It's objectives are:
 * create tests using any test automation tool
 
 
-##Getting started
+## Getting started
 
 Clone this repo
 
