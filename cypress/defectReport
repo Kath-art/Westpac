@@ -1,0 +1,66 @@
+Defects - All Defects found - Summaries
+1) if you don't add a comment, your vote isn't cast - although the comment field isn't marked mandatory.
+2) Login field at registration - shouldn't that be called username?
+3) Entry fields aren't removed after registration - they stay there but are empty
+4) No character limit on the comment field
+5) in the car detail: images, and description aren't aligned inside the html container
+6) if you don't click "save" on the profile page, and then logout the profile information page is still displayed
+7) there is no "forgotten password" link on the main page
+8) Changing password - should be separate from the other profile information
+9) Language drop down in password grouping is un-necessary
+10) in the profile page, there are 2 headings called "Additional Info" - one for personal information and one for password updates - these should be named accordingly
+11) the "leave empty to keep current", text should be removed, as that's not actually the case, the current password does have to be supplied
+12) possible to add an invalid value using cypress for the phone number field, but not possible when manually entering the value.
+
+
+
+Defect Report for top 2 Defects
+1)
+
+Summary:        Fields used for registration remain on the page after submission, but are empty
+Description:    After a user completes the registration process, the registration is committed but the registration fields stay empty.
+                A success message, "Registration is successful", is displayed.
+Test Cycle      01
+Build/platform: Cypress version 6.6, MacBook Air, CatalinaOS, Chrome 89 and Electron 11.2.2
+Severity:
+Priority:
+
+Steps:
+* Go to the homepage
+* Click the "register" button
+* On the registration page, complete the: "Login", "First Name", "Last Name", "Password" and "Confirm Password" fields.
+* Click on the "Register" button
+* A success message is displayed
+
+Expected results:
+The user completes all the required registration fields, the registration is submitted and the user is taken back to the home page.
+
+Actual results:
+The user completes all the required registration fields, the registration is submitted, the page does not change and the fields remain, containing no values.
+
+***********************************************************************************************
+
+2)
+Summary:        Information still displayed on the profile page after "save" button is clicked
+Description:    After a registered user has logged in, clicked on the "Profile" link, updated or added information to their profile, the information is 
+                displayed on screen after clicking "cancel" or "save".  They are not taken back to the homepage. 
+Test Cycle:     01
+Build/platform: Cypress version 6.6, MacBook Air, CatalinaOS, Chrome 89 and Electron 11.2.2
+Severity:
+Priority:
+
+Steps:
+1. Go to the homepage
+2. Click the "login" button
+3. After successfully logging in, click on the "Profile" link
+4. Either update the "First Name" or "Last Name" values, or add or update data in the "Gender", "Age", "Address", "Phone" or "Hobby" fields.
+5. Click on the "Save" button
+6. A success message is displayed
+
+Expected results:
+The user completes all the desired profile fields, the profile information is submitted and the user is taken back to the home page.
+
+Actual results:
+The user completes all the desired profile fields, the profile information is submitted , but the user is taken back to the home page and all 
+their profile data stays on screen.
+

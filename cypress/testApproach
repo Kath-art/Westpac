@@ -17,7 +17,8 @@ function correctly.
 
 Testing will be executed by the tester who writes the tests and will be run on a MacBook Air with a Catalina OS.  Tests can be executed either on 
 
-In future iterations, screenshot, additional browser, and viewport size, testing will be added.
+In future iterations, screenshot, additional browser, and viewport size, testing will be added. 
+As well as additional negative nesting on the registration field and added rigour around the login function.
 
 
  
