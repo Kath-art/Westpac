@@ -1,3 +1,7 @@
 {
-    "baseUrl" : "https://buggy.justtestit.org/"
+    "baseUrl" : "https://buggy.justtestit.org/",
+    "env" :{
+            "username": "testinguser",
+            "password": "Password!23"
+        }
 }

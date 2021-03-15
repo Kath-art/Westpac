@@ -6,7 +6,7 @@ const model = {
     voteComment:'textarea',
     voteButton:'.btn',
     voteList: '.table',
-    voteThankyou: 'p.card-text'
+    voteThankyou: 'p.card-text',
 }
 
 describe('User logs in and casts a vote', () => {

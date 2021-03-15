@@ -23,15 +23,12 @@ describe('updates the users first and last name and adds additional information 
         cy.get(model.profileLinks).eq(0).click();
         cy.get(model.profileForm).should('exist')
             .and('contain','Basic').and('contain','Additional Info');
-        cy.get(model.firstNameField).should('have.value','fname').clear().type('firstName');
-        cy.get(model.lastNameField).should('have.value','lname').clear().type('lastName');
+        cy.get(model.firstNameField).should('have.value','firstName').clear().type('firstName');
+        cy.get(model.lastNameField).should('have.value','lastName').clear().type('lastName');
         cy.get(model.saveButton).click();
 
     });
     it('adds the gender, age, address, phone and hobby, fields', () => {
-        cy.visit('/');
-        cy.login();
-        cy.get(model.profileLink).eq(0).click();
         cy.get(model.genderField).clear().type('Female');
         cy.get(model.ageField).clear().type('21');
         cy.get(model.addressField).clear().type('some text');
